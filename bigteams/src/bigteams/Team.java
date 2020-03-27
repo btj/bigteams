@@ -7,13 +7,13 @@ import java.util.Set;
  * Each instance of this class represents a team in a student-team graph.
  * 
  * @invar Each of this team's members has this team has its team.
- *    | getMembers().stream().allMatch(s -> s.getTeam() == this)
+ *    | getMembers().stream().allMatch(s -> s != null && s.getTeam() == this)
  */
 public class Team {
 	
 	/**
 	 * @invar | members != null // Phase 1 representation invariant
-	 * @invar | members.stream().allMatch(s -> s.team == this) // Phase 2 representation invariant
+	 * @invar | members.stream().allMatch(s -> s != null && s.team == this) // Phase 2 representation invariant
 	 * 
 	 * @representationObject
 	 * @peerObjects
