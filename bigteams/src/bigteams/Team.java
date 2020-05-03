@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Each instance of this class represents a team in a student-team graph.
  * 
- * @invar Each of this team's members has this team has its team.
+ * @invar Each of this team's members has this team as its team.
  *    | getMembers().stream().allMatch(s -> s != null && s.getTeam() == this)
  */
 public class Team {
