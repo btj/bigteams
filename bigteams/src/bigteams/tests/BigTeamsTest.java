@@ -21,6 +21,8 @@ class BigTeamsTest {
 		assertEquals(team, student1.getTeam());
 		assertEquals(Set.of(student1), team.getMembers());
 		
+		assertThrows(IllegalArgumentException.class, () -> student2.join(null));
+		
 		student2.join(team);
 		assertEquals(team, student2.getTeam());
 		assertEquals(Set.of(student1, student2), team.getMembers());
